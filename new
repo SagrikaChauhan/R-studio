@@ -1,0 +1,42 @@
+makeMatrix <- function( m = matrix() ) {
+
+	## Initialize the inverse property
+    i <- NULL
+set <- function( matrix ) {
+            m <<- matrix
+            i <<- NULL
+    }
+    ## Method the get the matrix
+    get <- function() {
+    	## Return the matrix
+    	m
+    }
+    
+    
+    setInverse <- function(inverse) {
+        i <<- inverse
+    }
+
+    ## Way to get the inverse of the matrix
+    getInverse <- function() {
+        ## Back the inverse property
+        i
+    }
+## Back a list of the methods
+    list(set = set, get = get,
+         setInverse = setInverse,
+         getInverse = getInverse)
+}
+## Computing the inverse of unique matrix back in makeMatrix"
+## Back to a matrix  “m”
+    m <- x$getInverse()
+    if( !is.null(m) ) {
+            message("getting data")
+            return(m)
+    }
+    ## Compute the inverse via matrix multiplication
+    m <- solve(data) %*% data
+## Setting the inverse to the object
+    x$setInverse(m)
+
+}
